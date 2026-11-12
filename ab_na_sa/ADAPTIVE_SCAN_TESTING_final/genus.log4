@@ -1,0 +1,187 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[14:18:31.095633] Configured Lic search path (21.01-s002): 5280@cadence
+
+Version: 21.14-s082_1, built Thu Jun 23 11:32:08 PDT 2022
+Options: 
+Date:    Tue Oct 06 14:18:31 2026
+Host:    cadence (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (8cores*16cpus*1physical cpu*11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz 16384KB) (15897804KB)
+PID:     91229
+OS:      Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+
+[14:18:31.419145] Periodic Lic check successful
+[14:18:31.419163] Feature usage summary:
+[14:18:31.419168] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (5 seconds elapsed).
+
+WARNING: This version of the tool is 1565 days old.
+@genus:root: 1> read_libs /home/install/FOUNDRY/digital/90nm/dig/lib/typical.lib
+
+Threads Configured:3
+
+  Message Summary for Library typical.lib:
+  ****************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  ****************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.000000, 25.000000) in library 'typical.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+@genus:root: 2> read_hdl /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+../rtl/cut.v
+|
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting a package item. in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f' on line 1, column 1.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+../rtl/cut.v
+ |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting a package item. in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f' on line 1, column 2.
+../rtl/cut.v
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting a package item. in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f' on line 1, column 3.
+../rtl/cut.v
+      |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '/' in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f' on line 1, column 7.
+../rtl/cut.v
+      |
+Error   : Unexpected end of file. [VLOGPT-11] [read_hdl]
+        : Expecting token ';', reached end of file in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f' on line 1, column 7.
+        : Unexpected end of file encountered.
+1
+@genus:root: 3> read_hdl -sv -f /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/cut.v'.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/scan_chain.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/activity_monitor.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/energy_monitor.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/fault_injection.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/faulty_cut.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/fault_detector.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/fault_coverage.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/conventional_top.v'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../rtl/conventional_design_top.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../verification/conventional_assertions.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File '../verification/coverage.sv'.
+@genus:root: 4> read_hdl -sv -f /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+    property p_cov_range;
+                       |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Property declaration in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/verification/conventional_assertions.sv' on line 7, column 24.
+        : For example, the following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+    property p_energy_monotonic;
+                              |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Property declaration in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/verification/conventional_assertions.sv' on line 10, column 31.
+@genus:root: 5> read_hdl -sv -f /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+module cut (
+         |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'cut' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/cut.v' on line 7, column 10.
+        : To modify the behaviour, do : set_attribute hdl_keep_first_module_definition false.
+module scan_chain #(
+                |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'scan_chain' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/scan_chain.v' on line 6, column 17.
+module activity_monitor #(
+                      |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'activity_monitor' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/activity_monitor.v' on line 8, column 23.
+module energy_monitor #(
+                    |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'energy_monitor' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/energy_monitor.v' on line 9, column 21.
+module fault_injection (
+                     |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'fault_injection' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_injection.v' on line 4, column 22.
+module faulty_cut (
+                |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'faulty_cut' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/faulty_cut.sv' on line 16, column 17.
+module fault_detector (
+                    |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'fault_detector' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_detector.v' on line 5, column 21.
+module fault_coverage #(
+                    |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'fault_coverage' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_coverage.v' on line 6, column 21.
+module conventional_top #(
+                      |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'conventional_top' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_top.v' on line 7, column 23.
+module conventional_design_top #(
+                             |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'conventional_design_top' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_design_top.sv' on line 1, column 30.
+@genus:root: 6> read_hdl -sv {/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/cut.v }
+module cut (
+         |
+Warning : Duplicate module definition. [VLOGPT-661]
+        : Ignoring definition of 'cut' module in file '/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/cut.v' on line 7, column 10.
+@genus:root: 7> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/scan_chain.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/scan_chain.v"
+@genus:root: 8> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/activity_monitor.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/activity_monitor.v"
+@genus:root: 9> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/energy_monitor.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/energy_monitor.v"
+@genus:root: 10> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_injection.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_injection.v"
+@genus:root: 11> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/faulty_cut.sv
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/faulty_cut.sv"
+@genus:root: 12> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_detector.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_detector.v"
+@genus:root: 13> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_coverage.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_coverage.v"
+@genus:root: 14> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_top.v
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_top.v"
+@genus:root: 15> /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_design_top.sv
+invalid command name "/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_design_top.sv"
+@genus:root: 16> exit
+
+Lic Summary:
+[15:05:02.425265] Cdslmd servers: cadence
+[15:05:02.425266] Feature usage summary:
+[15:05:02.425267] Genus_Synthesis
+
+Normal exit.

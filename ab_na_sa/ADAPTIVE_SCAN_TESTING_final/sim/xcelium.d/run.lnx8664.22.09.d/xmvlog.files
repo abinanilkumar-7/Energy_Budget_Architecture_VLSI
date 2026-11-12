@@ -1,0 +1,21 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/cut.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/scan_chain.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/activity_monitor.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/energy_monitor.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/fault_injection.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/faulty_cut.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/fault_detector.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/fault_coverage.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/adaptive_controller.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/adaptive_scan_controller.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/adaptive_top.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/rtl/adaptive_design_top.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/atpg/adaptive_atpg.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/tb/reference_model.v
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/verification/adaptive_assertions.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/verification/coverage.sv
+/home/user/ab_na_sa/ADAPTIVE_SCAN_TESTING_final/tb/tb_adaptive.sv

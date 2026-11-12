@@ -1,0 +1,21 @@
+# 20 stuck-at faults used by the adaptive ATPG
+0  a  SA0
+1  a  SA1
+2  b  SA0
+3  b  SA1
+4  c  SA0
+5  c  SA1
+6  d  SA0
+7  d  SA1
+8  e  SA0
+9  e  SA1
+10 x1 SA0
+11 x1 SA1
+12 x2 SA0
+13 x2 SA1
+14 x3 SA0
+15 x3 SA1
+16 x4 SA0
+17 x4 SA1
+18 y  SA0
+19 y  SA1

@@ -1,0 +1,138 @@
+xrun(64): 22.09-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s003: Started on Oct 08, 2026 at 11:06:38 EDT
+xrun
+	-64bit
+	-sv
+	-access +rwc
+	-linedebug
+	-f filelist.f
+		../rtl/cut.v
+		../rtl/scan_chain.v
+		../rtl/activity_monitor.v
+		../rtl/energy_monitor.v
+		../rtl/fault_injection.v
+		../rtl/faulty_cut.sv
+		../rtl/fault_detector.v
+		../rtl/fault_coverage.v
+		../rtl/conventional_top.v
+		../rtl/conventional_design_top.sv
+		../tb/reference_model.v
+		../verification/conventional_assertions.sv
+		../verification/coverage.sv
+		../tb/tb_conventional.sv
+	-top tb_conventional
+	-l logs/xrun.log
+	-gui
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+file: ../rtl/cut.v
+	module worklib.cut:v
+		errors: 0, warnings: 0
+file: ../rtl/scan_chain.v
+	module worklib.scan_chain:v
+		errors: 0, warnings: 0
+file: ../rtl/activity_monitor.v
+	module worklib.activity_monitor:v
+		errors: 0, warnings: 0
+file: ../rtl/energy_monitor.v
+	module worklib.energy_monitor:v
+		errors: 0, warnings: 0
+file: ../rtl/fault_injection.v
+	module worklib.fault_injection:v
+		errors: 0, warnings: 0
+file: ../rtl/faulty_cut.sv
+	module worklib.faulty_cut:sv
+		errors: 0, warnings: 0
+file: ../rtl/fault_detector.v
+	module worklib.fault_detector:v
+		errors: 0, warnings: 0
+file: ../rtl/fault_coverage.v
+	module worklib.fault_coverage:v
+		errors: 0, warnings: 0
+file: ../rtl/conventional_top.v
+	module worklib.conventional_top:v
+		errors: 0, warnings: 0
+file: ../rtl/conventional_design_top.sv
+	module worklib.conventional_design_top:sv
+		errors: 0, warnings: 0
+file: ../tb/reference_model.v
+	module worklib.reference_model:v
+		errors: 0, warnings: 0
+file: ../verification/conventional_assertions.sv
+	module worklib.conventional_assertions:sv
+		errors: 0, warnings: 0
+file: ../verification/coverage.sv
+	module worklib.conventional_coverage:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_conventional.sv
+	module worklib.tb_conventional:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_conventional
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.conventional_assertions:sv <0x14f8ee03>
+			streams:   8, words:  7821
+		worklib.fault_coverage:v <0x53f05048>
+			streams:   5, words:  3384
+		worklib.fault_detector:v <0x477ee579>
+			streams:   0, words:     0
+		worklib.fault_injection:v <0x6ea62cd4>
+			streams:   0, words:     0
+		worklib.faulty_cut:sv <0x113e335c>
+			streams:  43, words: 13550
+		worklib.energy_monitor:v <0x144fb2fa>
+			streams:   6, words:  2180
+		worklib.activity_monitor:v <0x4ab49295>
+			streams:   8, words:  3572
+		worklib.scan_chain:v <0x44fd7732>
+			streams:   4, words:  1719
+		worklib.conventional_design_top:sv <0x4c5874e7>
+			streams:   0, words:     0
+		worklib.cut:v <0x65603dde>
+			streams:   0, words:     0
+		worklib.tb_conventional:sv <0x13e35904>
+			streams:  20, words: 25863
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             22      13
+		Registers:           56      56
+		Scalar wires:        68       -
+		Expanded wires:       8       1
+		Vectored wires:       9       -
+		Always blocks:       14      14
+		Initial blocks:      11      11
+		Cont. assignments:   10      17
+		Pseudo assignments:  44      44
+		Assertions:           2       2
+	Writing initial simulation snapshot: worklib.tb_conventional:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/install/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_conventional.activity tb_conventional.activity_delta tb_conventional.actual_y tb_conventional.b tb_conventional.clk tb_conventional.coverage tb_conventional.csv_fd tb_conventional.detected_faults tb_conventional.detected_map tb_conventional.energy tb_conventional.energy_increment tb_conventional.f tb_conventional.fault_detected tb_conventional.fault_enable tb_conventional.fault_index tb_conventional.golden_y tb_conventional.p tb_conventional.patterns_run tb_conventional.reset tb_conventional.response_valid tb_conventional.result_fd tb_conventional.scan_data tb_conventional.scan_enable tb_conventional.scan_in tb_conventional.scan_out
+Created probe 1
+xcelium> run
+============================================================
+ CONVENTIONAL SCAN TESTING ONLY
+ 20 faults x 32 fixed patterns = 640 applications
+============================================================
+============================================================
+ CONVENTIONAL FINAL RESULT
+ Energy   = 15349
+ Coverage = 100%
+ Patterns = 640
+============================================================
+RESULT_FILE=../results/conventional_results.txt
+Simulation complete via $finish(1) at time 70456 NS + 0
+../tb/tb_conventional.sv:122         $finish;
+xcelium> 

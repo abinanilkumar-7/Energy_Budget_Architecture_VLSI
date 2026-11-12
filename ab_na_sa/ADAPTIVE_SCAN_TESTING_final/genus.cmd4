@@ -1,0 +1,22 @@
+# Cadence Genus(TM) Synthesis Solution, Version 21.14-s082_1, built Jun 23 2022 14:32:08
+
+# Date: Tue Oct 06 14:18:31 2026
+# Host: cadence (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (8cores*16cpus*1physical cpu*11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz 16384KB)
+# OS:   Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+read_libs /home/install/FOUNDRY/digital/90nm/dig/lib/typical.lib
+read_hdl /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+read_hdl -sv -f /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+read_hdl -sv -f /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+read_hdl -sv -f /home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/filelist_genus.f
+read_hdl -sv {/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/cut.v }
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/scan_chain.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/activity_monitor.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/energy_monitor.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_injection.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/faulty_cut.sv
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_detector.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/fault_coverage.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_top.v
+/home/user/ab_na_sa/CONVENTIONAL_SCAN_TESTING/rtl/conventional_design_top.sv
+exit

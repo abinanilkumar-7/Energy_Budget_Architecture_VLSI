@@ -1,0 +1,1 @@
+s1(05Oct2026:11:53:02):  xrun -64bit -sv -access +rwc -linedebug -f filelist.f -top tb_conventional -l logs/xrun.log -gui 

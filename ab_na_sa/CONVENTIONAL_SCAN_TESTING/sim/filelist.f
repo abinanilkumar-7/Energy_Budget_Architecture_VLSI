@@ -1,0 +1,14 @@
+../rtl/cut.v
+../rtl/scan_chain.v
+../rtl/activity_monitor.v
+../rtl/energy_monitor.v
+../rtl/fault_injection.v
+../rtl/faulty_cut.sv
+../rtl/fault_detector.v
+../rtl/fault_coverage.v
+../rtl/conventional_top.v
+../rtl/conventional_design_top.sv
+../tb/reference_model.v
+../verification/conventional_assertions.sv
+../verification/coverage.sv
+../tb/tb_conventional.sv

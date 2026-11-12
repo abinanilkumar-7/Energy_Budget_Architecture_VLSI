@@ -1,0 +1,17 @@
+../rtl/cut.v
+../rtl/scan_chain.v
+../rtl/activity_monitor.v
+../rtl/energy_monitor.v
+../rtl/fault_injection.v
+../rtl/faulty_cut.sv
+../rtl/fault_detector.v
+../rtl/fault_coverage.v
+../rtl/adaptive_controller.v
+../rtl/adaptive_scan_controller.sv
+../rtl/adaptive_top.sv
+../rtl/adaptive_design_top.sv
+../atpg/adaptive_atpg.sv
+../tb/reference_model.v
+../verification/adaptive_assertions.sv
+../verification/coverage.sv
+../tb/tb_adaptive.sv

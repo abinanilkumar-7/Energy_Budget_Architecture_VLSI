@@ -1,0 +1,29 @@
+ADAPTIVE_SCAN_TESTING_FINAL/
+├── rtl/
+│   ├── cut.v
+│   ├── scan_chain.v
+│   ├── activity_monitor.v
+│   ├── energy_monitor.v
+│   ├── fault_injection.v
+│   ├── faulty_cut.sv
+│   ├── fault_detector.v
+│   ├── fault_coverage.v
+│   ├── adaptive_controller.v
+│   ├── adaptive_scan_controller.sv
+│   ├── adaptive_top.sv
+│   └── adaptive_design_top.sv
+├── atpg/
+│   └── adaptive_atpg.sv
+├── tb/
+│   ├── reference_model.v
+│   └── tb_adaptive.sv
+├── verification/
+│   ├── adaptive_assertions.sv
+│   └── coverage.sv
+├── sim/
+│   ├── filelist.f
+│   └── run.sh
+├── results/
+├── constraints/
+├── genus/
+└── fault_list.txt

@@ -1,0 +1,81 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[10:17:28.095641] Configured Lic search path (21.01-s002): 5280@cadence
+
+Version: 21.14-s082_1, built Thu Jun 23 11:32:08 PDT 2022
+Options: -files genus_run.tcl 
+Date:    Thu Oct 08 10:17:28 2026
+Host:    cadence (x86_64 w/Linux 4.18.0-425.3.1.el8.x86_64) (8cores*16cpus*1physical cpu*11th Gen Intel(R) Core(TM) i7-11700 @ 2.50GHz 16384KB) (15897804KB)
+PID:     10934
+OS:      Red Hat Enterprise Linux release 8.7 (Ootpa)
+
+
+[10:17:28.341065] Periodic Lic check successful
+[10:17:28.341066] Feature usage summary:
+[10:17:28.341066] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (15 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source genus_run.tcl
+#@ Begin verbose source ./genus_run.tcl
+@file(genus_run.tcl) 12: set TOP adaptive_design_top
+@file(genus_run.tcl) 13: set ROOT [file normalize [file join [file dirname [info script]] ..]]
+@file(genus_run.tcl) 14: set RTL  [file join $ROOT rtl]
+@file(genus_run.tcl) 15: set ATPG [file join $ROOT atpg]
+@file(genus_run.tcl) 16: set CONSTRAINTS [file join [file dirname [info script]] constraints]
+@file(genus_run.tcl) 17: set REPORTS [file join [file dirname [info script]] reports]
+@file(genus_run.tcl) 18: set OUTPUTS [file join [file dirname [info script]] outputs]
+@file(genus_run.tcl) 20: file mkdir $REPORTS
+@file(genus_run.tcl) 21: file mkdir $OUTPUTS
+@file(genus_run.tcl) 29: if {![info exists ::env(STD_CELL_LIB)] || $::env(STD_CELL_LIB) eq ""} {
+    puts "ERROR: STD_CELL_LIB is not set."
+    puts "Example: setenv STD_CELL_LIB /path/to/stdcells.lib"
+    exit 2
+}
+@file(genus_run.tcl) 35: set LIB [file normalize $::env(STD_CELL_LIB)]
+@file(genus_run.tcl) 36: if {![file exists $LIB]} {
+    puts "ERROR: Liberty file does not exist: $LIB"
+    exit 2
+}
+@file(genus_run.tcl) 41: puts "============================================================"
+============================================================
+@file(genus_run.tcl) 42: puts " GENUS ADAPTIVE SCAN SYNTHESIS"
+ GENUS ADAPTIVE SCAN SYNTHESIS
+@file(genus_run.tcl) 43: puts "============================================================"
+============================================================
+@file(genus_run.tcl) 44: puts "Top      : $TOP"
+Top      : adaptive_design_top
+@file(genus_run.tcl) 45: puts "RTL      : $RTL"
+RTL      : /home/user/ab_na_sa/rtl
+@file(genus_run.tcl) 46: puts "Library  : $LIB"
+Library  : /home/install/FOUNDRY/digital/90nm/dig/lib/typical.lib
+@file(genus_run.tcl) 47: puts "============================================================"
+============================================================
+@file(genus_run.tcl) 52: set_attribute init_lib_search_path [file dirname $LIB] /
+Error   : The tool is running in common ui mode. [TUI-509] [::unknown]
+        : Command 'set_attribute' is a legacy ui command.
+        : Use set_db/get_db instead or do set_db common_ui false at start of the run.
+#@ End verbose source ./genus_run.tcl
+
+Encountered problems processing file: genus_run.tcl
+WARNING: This version of the tool is 1567 days old.
+@genus:root: 2> exit
+
+Lic Summary:
+[10:19:52.140720] Cdslmd servers: cadence
+[10:19:52.140723] Feature usage summary:
+[10:19:52.140723] Genus_Synthesis
+
+Normal exit.

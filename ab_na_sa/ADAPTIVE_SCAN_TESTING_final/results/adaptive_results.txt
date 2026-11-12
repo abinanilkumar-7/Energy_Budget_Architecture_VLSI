@@ -1,0 +1,14 @@
+energy_budget=5000
+priority_threshold=3500
+switch_energy=3518
+switch_coverage=25
+adaptive_energy_added=198
+total_energy=3716
+final_coverage=100
+conventional_patterns=149
+adaptive_patterns=15
+total_patterns=164
+acceptable_95_reached=1
+full_100_reached=1
+budget_exhausted=0
+within_budget=1

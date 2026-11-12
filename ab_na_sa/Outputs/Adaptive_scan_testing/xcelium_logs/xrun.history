@@ -1,0 +1,1 @@
+s1(05Oct2026:14:17:57):  xrun -64bit -sv -access +rwc -linedebug -f filelist.f -top tb_adaptive -l logs/xrun.log -gui 

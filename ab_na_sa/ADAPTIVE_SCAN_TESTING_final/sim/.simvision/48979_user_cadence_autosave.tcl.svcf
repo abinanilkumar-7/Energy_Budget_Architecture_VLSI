@@ -1,0 +1,290 @@
+
+#
+# Preferences
+#
+preferences set plugin-enable-svdatabrowser-new 1
+preferences set toolbar-SimControl-WaveWindow {
+  usual
+  position -anchor e
+}
+preferences set cursorctl-dont-show-sync-warning 1
+preferences set toolbar-sendToIndago-WaveWindow {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Standard-Console {
+  usual
+  position -pos 1
+}
+preferences set toolbar-Search-Console {
+  usual
+  position -pos 2
+}
+preferences set plugin-enable-groupscope 0
+preferences set plugin-enable-interleaveandcompare 0
+preferences set plugin-enable-waveformfrequencyplot 0
+
+#
+# Mnemonic Maps
+#
+mmap new  -reuse -name {Boolean as Logic} -radix %b -contents {{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}}
+mmap new  -reuse -name {Example Map} -radix %x -contents {{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 1920x977+-1+27}] != ""} {
+    window geometry "Design Browser 1" 1920x977+-1+27
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set -scope  simulator::tb_adaptive 
+browser set \
+    -signalsort name
+browser yview see  simulator::tb_adaptive 
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 1" -geometry 1920x977+-1+27}] != ""} {
+    window geometry "Waveform 1" 1920x977+-1+27
+}
+window target "Waveform 1" on
+waveform using {Waveform 1}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ns \
+    -valuewidth 75
+waveform baseline set -time 0
+
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.ACCEPTABLE_COVERAGE[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.ENERGY_PER_TRANSITION
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.PHASE_ADAPTIVE[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.PHASE_CONVENTIONAL[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.PHASE_DONE[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.PRIORITY_PERCENT[7:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.STOP_COVERAGE[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.TOTAL_FAULTS
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.WIDTH
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.acceptable_reached
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.active_fault[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.activity[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.activity_delta[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.actual_y
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.adaptive_mode
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.adaptive_patterns_used
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.atpg_budget_blocked
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.atpg_done
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.atpg_done_drive
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.atpg_done_seen
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.atpg_pattern_valid
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.atpg_predicted_gain[3:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.atpg_request
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.atpg_score[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.atpg_selected_cost[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.atpg_target_fault[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.atpg_test_pattern[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.budget_exhausted
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.clk
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.conv_fault[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.conv_pattern[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.conv_pattern_valid
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.conventional_patterns_used
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.coverage[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.csv_fd
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.decision[1:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.detected_faults[7:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.detected_map[19:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.energy[31:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.energy_budget[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.energy_budget_cfg
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.energy_increment[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.fault_detected
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.fault_enable
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.full_coverage
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.golden_y
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.high_priority
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.issued_cost
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.issued_fault[4:0]}
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.issued_pattern[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.issued_score
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.pattern_done
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.pattern_drive[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.pattern_valid_drive
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.phase_adaptive
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.priority_threshold[31:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.reset
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.result_fd
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.scan_data[7:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.scan_enable
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.scan_in
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.scan_inputs[4:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.scan_out
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.switch_coverage
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.switch_energy
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.target_fault_drive[4:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.test_complete
+	} ]
+set id [waveform add -signals  {
+	{simulator::tb_adaptive.test_phase[1:0]}
+	} ]
+set id [waveform add -signals  {
+	simulator::tb_adaptive.wait_cycles
+	} ]
+
+waveform xview limits 12553ns 14258ns
+
+#
+# Waveform Window Links
+#
+
+#
+# Console windows
+#
+console set -windowname Console
+window geometry Console 1920x977+-1+27
+
+#
+# Layout selection
+#

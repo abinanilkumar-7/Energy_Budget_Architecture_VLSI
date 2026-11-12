@@ -1,0 +1,346 @@
+xrun(64): 22.09-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.09-s003: Started on Oct 05, 2026 at 14:17:57 EDT
+xrun
+	-64bit
+	-sv
+	-access +rwc
+	-linedebug
+	-f filelist.f
+		../rtl/cut.v
+		../rtl/scan_chain.v
+		../rtl/activity_monitor.v
+		../rtl/energy_monitor.v
+		../rtl/fault_injection.v
+		../rtl/faulty_cut.sv
+		../rtl/fault_detector.v
+		../rtl/fault_coverage.v
+		../rtl/adaptive_controller.v
+		../rtl/adaptive_scan_controller.sv
+		../rtl/adaptive_top.sv
+		../rtl/adaptive_design_top.sv
+		../atpg/adaptive_atpg.sv
+		../tb/reference_model.v
+		../verification/adaptive_assertions.sv
+		../verification/coverage.sv
+		../tb/tb_adaptive.sv
+	-top tb_adaptive
+	-l logs/xrun.log
+	-gui
+xrun: *W,BADPRF: The -linedebug option may have an adverse performance impact.
+file: ../rtl/cut.v
+	module worklib.cut:v
+		errors: 0, warnings: 0
+file: ../rtl/scan_chain.v
+	module worklib.scan_chain:v
+		errors: 0, warnings: 0
+file: ../rtl/activity_monitor.v
+	module worklib.activity_monitor:v
+		errors: 0, warnings: 0
+file: ../rtl/energy_monitor.v
+	module worklib.energy_monitor:v
+		errors: 0, warnings: 0
+file: ../rtl/fault_injection.v
+	module worklib.fault_injection:v
+		errors: 0, warnings: 0
+file: ../rtl/faulty_cut.sv
+	module worklib.faulty_cut:sv
+		errors: 0, warnings: 0
+file: ../rtl/fault_detector.v
+	module worklib.fault_detector:v
+		errors: 0, warnings: 0
+file: ../rtl/fault_coverage.v
+	module worklib.fault_coverage:v
+		errors: 0, warnings: 0
+file: ../rtl/adaptive_controller.v
+	module worklib.adaptive_controller:v
+		errors: 0, warnings: 0
+file: ../rtl/adaptive_scan_controller.sv
+	module worklib.adaptive_scan_controller:sv
+		errors: 0, warnings: 0
+file: ../rtl/adaptive_top.sv
+	module worklib.adaptive_top:sv
+		errors: 0, warnings: 0
+file: ../rtl/adaptive_design_top.sv
+	module worklib.adaptive_design_top:sv
+		errors: 0, warnings: 0
+file: ../atpg/adaptive_atpg.sv
+	module worklib.adaptive_atpg:sv
+		errors: 0, warnings: 0
+file: ../tb/reference_model.v
+	module worklib.reference_model:v
+		errors: 0, warnings: 0
+file: ../verification/adaptive_assertions.sv
+	module worklib.adaptive_assertions:sv
+		errors: 0, warnings: 0
+file: ../verification/coverage.sv
+	module worklib.adaptive_coverage:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_adaptive.sv
+	module worklib.tb_adaptive:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_adaptive
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.adaptive_coverage:sv <0x450e7a85>
+			streams:  17, words:  5892
+		worklib.adaptive_assertions:sv <0x07a54374>
+			streams:  20, words: 21844
+		worklib.adaptive_atpg:sv <0x21bb72ed>
+			streams:  10, words: 18120
+		worklib.fault_coverage:v <0x0b0ebfdb>
+			streams:   5, words:  3321
+		worklib.fault_detector:v <0x353f2cbd>
+			streams:   0, words:     0
+		worklib.fault_injection:v <0x6b0404ad>
+			streams:   0, words:     0
+		worklib.faulty_cut:sv <0x1cd6f7f7>
+			streams:  43, words: 13550
+		worklib.energy_monitor:v <0x2a125b03>
+			streams:   5, words:  1842
+		worklib.activity_monitor:v <0x75b2354a>
+			streams:   8, words:  3517
+		worklib.scan_chain:v <0x680021a2>
+			streams:   4, words:  1398
+		worklib.adaptive_scan_controller:sv <0x0a235c09>
+			streams:  28, words: 11568
+		worklib.adaptive_controller:v <0x1ff9ecdd>
+			streams:   4, words:  1669
+		worklib.adaptive_top:sv <0x3fd8fe0f>
+			streams:  51, words: 18579
+		worklib.adaptive_design_top:sv <0x7d4b57c0>
+			streams:  24, words: 12201
+		worklib.cut:v <0x1fe3c7a4>
+			streams:   0, words:     0
+		worklib.tb_adaptive:sv <0x4708b656>
+			streams:  29, words: 71378
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		               Instances  Unique
+		Modules:              26      17
+		Registers:           217     217
+		Scalar wires:        152       -
+		Expanded wires:        5       1
+		Vectored wires:       77       -
+		Named events:          4       4
+		Always blocks:        29      29
+		Initial blocks:        6       6
+		Cont. assignments:    22      29
+		Pseudo assignments:  121     121
+		Assertions:            4       4
+	Writing initial simulation snapshot: worklib.tb_adaptive:sv
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /home/install/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_adaptive.acceptable_reached tb_adaptive.active_fault tb_adaptive.activity tb_adaptive.activity_delta tb_adaptive.actual_y tb_adaptive.adaptive_energy_added tb_adaptive.adaptive_mode tb_adaptive.adaptive_patterns_used tb_adaptive.atpg_budget_blocked tb_adaptive.atpg_done tb_adaptive.atpg_done_drive tb_adaptive.atpg_done_seen tb_adaptive.atpg_pattern_valid tb_adaptive.atpg_predicted_gain tb_adaptive.atpg_request tb_adaptive.atpg_score tb_adaptive.atpg_selected_cost tb_adaptive.atpg_target_fault tb_adaptive.atpg_test_pattern tb_adaptive.budget_exhausted tb_adaptive.clk tb_adaptive.conv_fault tb_adaptive.conv_pattern tb_adaptive.conv_pattern_valid tb_adaptive.conventional_patterns_used tb_adaptive.coverage tb_adaptive.csv_fd tb_adaptive.decision tb_adaptive.detected_faults tb_adaptive.detected_map tb_adaptive.energy tb_adaptive.energy_budget tb_adaptive.energy_budget_cfg tb_adaptive.energy_increment tb_adaptive.fault_detected tb_adaptive.fault_enable tb_adaptive.full_coverage tb_adaptive.golden_y tb_adaptive.high_priority tb_adaptive.issued_cost tb_adaptive.issued_fault tb_adaptive.issued_pattern tb_adaptive.issued_score tb_adaptive.pattern_done tb_adaptive.pattern_drive tb_adaptive.pattern_valid_drive tb_adaptive.phase_adaptive tb_adaptive.priority_threshold tb_adaptive.reset tb_adaptive.result_fd tb_adaptive.scan_data tb_adaptive.scan_enable tb_adaptive.scan_in tb_adaptive.scan_inputs tb_adaptive.scan_out tb_adaptive.switch_coverage tb_adaptive.switch_energy tb_adaptive.target_fault_drive tb_adaptive.test_complete tb_adaptive.test_phase tb_adaptive.total_patterns_used tb_adaptive.wait_cycles
+Created probe 1
+xcelium> run
+============================================================
+ HYBRID ADAPTIVE SCAN TEST
+ Budget=5000 | 70% threshold=3500 | acceptable=95% | stop=100%
+============================================================
+CONV | n=1 | pattern=00 | fault=0 | energy=0/5000 | coverage=0% | threshold=3500
+CONV | n=2 | pattern=01 | fault=0 | energy=1/5000 | coverage=0% | threshold=3500
+CONV | n=3 | pattern=02 | fault=0 | energy=19/5000 | coverage=0% | threshold=3500
+CONV | n=4 | pattern=03 | fault=0 | energy=34/5000 | coverage=0% | threshold=3500
+CONV | n=5 | pattern=04 | fault=0 | energy=53/5000 | coverage=0% | threshold=3500
+CONV | n=6 | pattern=05 | fault=0 | energy=70/5000 | coverage=5% | threshold=3500
+CONV | n=7 | pattern=06 | fault=0 | energy=100/5000 | coverage=5% | threshold=3500
+CONV | n=8 | pattern=07 | fault=0 | energy=115/5000 | coverage=5% | threshold=3500
+CONV | n=9 | pattern=08 | fault=0 | energy=135/5000 | coverage=5% | threshold=3500
+CONV | n=10 | pattern=09 | fault=0 | energy=152/5000 | coverage=5% | threshold=3500
+CONV | n=11 | pattern=0a | fault=0 | energy=186/5000 | coverage=5% | threshold=3500
+CONV | n=12 | pattern=0b | fault=0 | energy=217/5000 | coverage=5% | threshold=3500
+CONV | n=13 | pattern=0c | fault=0 | energy=246/5000 | coverage=5% | threshold=3500
+CONV | n=14 | pattern=0d | fault=0 | energy=263/5000 | coverage=5% | threshold=3500
+CONV | n=15 | pattern=0e | fault=0 | energy=293/5000 | coverage=5% | threshold=3500
+CONV | n=16 | pattern=0f | fault=0 | energy=308/5000 | coverage=5% | threshold=3500
+CONV | n=17 | pattern=10 | fault=0 | energy=329/5000 | coverage=5% | threshold=3500
+CONV | n=18 | pattern=11 | fault=0 | energy=346/5000 | coverage=5% | threshold=3500
+CONV | n=19 | pattern=12 | fault=0 | energy=380/5000 | coverage=5% | threshold=3500
+CONV | n=20 | pattern=13 | fault=0 | energy=411/5000 | coverage=5% | threshold=3500
+CONV | n=21 | pattern=14 | fault=0 | energy=446/5000 | coverage=5% | threshold=3500
+CONV | n=22 | pattern=15 | fault=0 | energy=479/5000 | coverage=5% | threshold=3500
+CONV | n=23 | pattern=16 | fault=0 | energy=525/5000 | coverage=5% | threshold=3500
+CONV | n=24 | pattern=17 | fault=0 | energy=556/5000 | coverage=5% | threshold=3500
+CONV | n=25 | pattern=18 | fault=0 | energy=584/5000 | coverage=5% | threshold=3500
+CONV | n=26 | pattern=19 | fault=0 | energy=601/5000 | coverage=5% | threshold=3500
+CONV | n=27 | pattern=1a | fault=0 | energy=635/5000 | coverage=5% | threshold=3500
+CONV | n=28 | pattern=1b | fault=0 | energy=666/5000 | coverage=5% | threshold=3500
+CONV | n=29 | pattern=1c | fault=0 | energy=695/5000 | coverage=5% | threshold=3500
+CONV | n=30 | pattern=1d | fault=0 | energy=712/5000 | coverage=5% | threshold=3500
+CONV | n=31 | pattern=1e | fault=0 | energy=742/5000 | coverage=5% | threshold=3500
+CONV | n=32 | pattern=1f | fault=0 | energy=757/5000 | coverage=5% | threshold=3500
+CONV | n=33 | pattern=00 | fault=1 | energy=768/5000 | coverage=5% | threshold=3500
+CONV | n=34 | pattern=01 | fault=1 | energy=769/5000 | coverage=5% | threshold=3500
+CONV | n=35 | pattern=02 | fault=1 | energy=787/5000 | coverage=5% | threshold=3500
+CONV | n=36 | pattern=03 | fault=1 | energy=802/5000 | coverage=5% | threshold=3500
+CONV | n=37 | pattern=04 | fault=1 | energy=821/5000 | coverage=10% | threshold=3500
+CONV | n=38 | pattern=05 | fault=1 | energy=838/5000 | coverage=10% | threshold=3500
+CONV | n=39 | pattern=06 | fault=1 | energy=868/5000 | coverage=10% | threshold=3500
+CONV | n=40 | pattern=07 | fault=1 | energy=883/5000 | coverage=10% | threshold=3500
+CONV | n=41 | pattern=08 | fault=1 | energy=903/5000 | coverage=10% | threshold=3500
+CONV | n=42 | pattern=09 | fault=1 | energy=920/5000 | coverage=10% | threshold=3500
+CONV | n=43 | pattern=0a | fault=1 | energy=954/5000 | coverage=10% | threshold=3500
+CONV | n=44 | pattern=0b | fault=1 | energy=985/5000 | coverage=10% | threshold=3500
+CONV | n=45 | pattern=0c | fault=1 | energy=1014/5000 | coverage=10% | threshold=3500
+CONV | n=46 | pattern=0d | fault=1 | energy=1031/5000 | coverage=10% | threshold=3500
+CONV | n=47 | pattern=0e | fault=1 | energy=1061/5000 | coverage=10% | threshold=3500
+CONV | n=48 | pattern=0f | fault=1 | energy=1076/5000 | coverage=10% | threshold=3500
+CONV | n=49 | pattern=10 | fault=1 | energy=1097/5000 | coverage=10% | threshold=3500
+CONV | n=50 | pattern=11 | fault=1 | energy=1114/5000 | coverage=10% | threshold=3500
+CONV | n=51 | pattern=12 | fault=1 | energy=1148/5000 | coverage=10% | threshold=3500
+CONV | n=52 | pattern=13 | fault=1 | energy=1179/5000 | coverage=10% | threshold=3500
+CONV | n=53 | pattern=14 | fault=1 | energy=1214/5000 | coverage=10% | threshold=3500
+CONV | n=54 | pattern=15 | fault=1 | energy=1247/5000 | coverage=10% | threshold=3500
+CONV | n=55 | pattern=16 | fault=1 | energy=1293/5000 | coverage=10% | threshold=3500
+CONV | n=56 | pattern=17 | fault=1 | energy=1324/5000 | coverage=10% | threshold=3500
+CONV | n=57 | pattern=18 | fault=1 | energy=1352/5000 | coverage=10% | threshold=3500
+CONV | n=58 | pattern=19 | fault=1 | energy=1369/5000 | coverage=10% | threshold=3500
+CONV | n=59 | pattern=1a | fault=1 | energy=1403/5000 | coverage=10% | threshold=3500
+CONV | n=60 | pattern=1b | fault=1 | energy=1434/5000 | coverage=10% | threshold=3500
+CONV | n=61 | pattern=1c | fault=1 | energy=1463/5000 | coverage=10% | threshold=3500
+CONV | n=62 | pattern=1d | fault=1 | energy=1480/5000 | coverage=10% | threshold=3500
+CONV | n=63 | pattern=1e | fault=1 | energy=1510/5000 | coverage=10% | threshold=3500
+CONV | n=64 | pattern=1f | fault=1 | energy=1525/5000 | coverage=10% | threshold=3500
+CONV | n=65 | pattern=00 | fault=2 | energy=1536/5000 | coverage=10% | threshold=3500
+CONV | n=66 | pattern=01 | fault=2 | energy=1537/5000 | coverage=10% | threshold=3500
+CONV | n=67 | pattern=02 | fault=2 | energy=1555/5000 | coverage=10% | threshold=3500
+CONV | n=68 | pattern=03 | fault=2 | energy=1570/5000 | coverage=10% | threshold=3500
+CONV | n=69 | pattern=04 | fault=2 | energy=1589/5000 | coverage=10% | threshold=3500
+CONV | n=70 | pattern=05 | fault=2 | energy=1606/5000 | coverage=10% | threshold=3500
+CONV | n=71 | pattern=06 | fault=2 | energy=1636/5000 | coverage=15% | threshold=3500
+CONV | n=72 | pattern=07 | fault=2 | energy=1651/5000 | coverage=15% | threshold=3500
+CONV | n=73 | pattern=08 | fault=2 | energy=1671/5000 | coverage=15% | threshold=3500
+CONV | n=74 | pattern=09 | fault=2 | energy=1688/5000 | coverage=15% | threshold=3500
+CONV | n=75 | pattern=0a | fault=2 | energy=1722/5000 | coverage=15% | threshold=3500
+CONV | n=76 | pattern=0b | fault=2 | energy=1753/5000 | coverage=15% | threshold=3500
+CONV | n=77 | pattern=0c | fault=2 | energy=1782/5000 | coverage=15% | threshold=3500
+CONV | n=78 | pattern=0d | fault=2 | energy=1799/5000 | coverage=15% | threshold=3500
+CONV | n=79 | pattern=0e | fault=2 | energy=1829/5000 | coverage=15% | threshold=3500
+CONV | n=80 | pattern=0f | fault=2 | energy=1844/5000 | coverage=15% | threshold=3500
+CONV | n=81 | pattern=10 | fault=2 | energy=1865/5000 | coverage=15% | threshold=3500
+CONV | n=82 | pattern=11 | fault=2 | energy=1882/5000 | coverage=15% | threshold=3500
+CONV | n=83 | pattern=12 | fault=2 | energy=1916/5000 | coverage=15% | threshold=3500
+CONV | n=84 | pattern=13 | fault=2 | energy=1947/5000 | coverage=15% | threshold=3500
+CONV | n=85 | pattern=14 | fault=2 | energy=1982/5000 | coverage=15% | threshold=3500
+CONV | n=86 | pattern=15 | fault=2 | energy=2015/5000 | coverage=15% | threshold=3500
+CONV | n=87 | pattern=16 | fault=2 | energy=2061/5000 | coverage=15% | threshold=3500
+CONV | n=88 | pattern=17 | fault=2 | energy=2092/5000 | coverage=15% | threshold=3500
+CONV | n=89 | pattern=18 | fault=2 | energy=2120/5000 | coverage=15% | threshold=3500
+CONV | n=90 | pattern=19 | fault=2 | energy=2137/5000 | coverage=15% | threshold=3500
+CONV | n=91 | pattern=1a | fault=2 | energy=2171/5000 | coverage=15% | threshold=3500
+CONV | n=92 | pattern=1b | fault=2 | energy=2202/5000 | coverage=15% | threshold=3500
+CONV | n=93 | pattern=1c | fault=2 | energy=2231/5000 | coverage=15% | threshold=3500
+CONV | n=94 | pattern=1d | fault=2 | energy=2248/5000 | coverage=15% | threshold=3500
+CONV | n=95 | pattern=1e | fault=2 | energy=2278/5000 | coverage=15% | threshold=3500
+CONV | n=96 | pattern=1f | fault=2 | energy=2293/5000 | coverage=15% | threshold=3500
+CONV | n=97 | pattern=00 | fault=3 | energy=2304/5000 | coverage=15% | threshold=3500
+CONV | n=98 | pattern=01 | fault=3 | energy=2305/5000 | coverage=15% | threshold=3500
+CONV | n=99 | pattern=02 | fault=3 | energy=2323/5000 | coverage=15% | threshold=3500
+CONV | n=100 | pattern=03 | fault=3 | energy=2338/5000 | coverage=15% | threshold=3500
+CONV | n=101 | pattern=04 | fault=3 | energy=2357/5000 | coverage=20% | threshold=3500
+CONV | n=102 | pattern=05 | fault=3 | energy=2374/5000 | coverage=20% | threshold=3500
+CONV | n=103 | pattern=06 | fault=3 | energy=2404/5000 | coverage=20% | threshold=3500
+CONV | n=104 | pattern=07 | fault=3 | energy=2419/5000 | coverage=20% | threshold=3500
+CONV | n=105 | pattern=08 | fault=3 | energy=2439/5000 | coverage=20% | threshold=3500
+CONV | n=106 | pattern=09 | fault=3 | energy=2456/5000 | coverage=20% | threshold=3500
+CONV | n=107 | pattern=0a | fault=3 | energy=2490/5000 | coverage=20% | threshold=3500
+CONV | n=108 | pattern=0b | fault=3 | energy=2521/5000 | coverage=20% | threshold=3500
+CONV | n=109 | pattern=0c | fault=3 | energy=2550/5000 | coverage=20% | threshold=3500
+CONV | n=110 | pattern=0d | fault=3 | energy=2567/5000 | coverage=20% | threshold=3500
+CONV | n=111 | pattern=0e | fault=3 | energy=2597/5000 | coverage=20% | threshold=3500
+CONV | n=112 | pattern=0f | fault=3 | energy=2612/5000 | coverage=20% | threshold=3500
+CONV | n=113 | pattern=10 | fault=3 | energy=2633/5000 | coverage=20% | threshold=3500
+CONV | n=114 | pattern=11 | fault=3 | energy=2650/5000 | coverage=20% | threshold=3500
+CONV | n=115 | pattern=12 | fault=3 | energy=2684/5000 | coverage=20% | threshold=3500
+CONV | n=116 | pattern=13 | fault=3 | energy=2715/5000 | coverage=20% | threshold=3500
+CONV | n=117 | pattern=14 | fault=3 | energy=2750/5000 | coverage=20% | threshold=3500
+CONV | n=118 | pattern=15 | fault=3 | energy=2783/5000 | coverage=20% | threshold=3500
+CONV | n=119 | pattern=16 | fault=3 | energy=2829/5000 | coverage=20% | threshold=3500
+CONV | n=120 | pattern=17 | fault=3 | energy=2860/5000 | coverage=20% | threshold=3500
+CONV | n=121 | pattern=18 | fault=3 | energy=2888/5000 | coverage=20% | threshold=3500
+CONV | n=122 | pattern=19 | fault=3 | energy=2905/5000 | coverage=20% | threshold=3500
+CONV | n=123 | pattern=1a | fault=3 | energy=2939/5000 | coverage=20% | threshold=3500
+CONV | n=124 | pattern=1b | fault=3 | energy=2970/5000 | coverage=20% | threshold=3500
+CONV | n=125 | pattern=1c | fault=3 | energy=2999/5000 | coverage=20% | threshold=3500
+CONV | n=126 | pattern=1d | fault=3 | energy=3016/5000 | coverage=20% | threshold=3500
+CONV | n=127 | pattern=1e | fault=3 | energy=3046/5000 | coverage=20% | threshold=3500
+CONV | n=128 | pattern=1f | fault=3 | energy=3061/5000 | coverage=20% | threshold=3500
+CONV | n=129 | pattern=00 | fault=4 | energy=3072/5000 | coverage=20% | threshold=3500
+CONV | n=130 | pattern=01 | fault=4 | energy=3073/5000 | coverage=20% | threshold=3500
+CONV | n=131 | pattern=02 | fault=4 | energy=3091/5000 | coverage=20% | threshold=3500
+CONV | n=132 | pattern=03 | fault=4 | energy=3106/5000 | coverage=20% | threshold=3500
+CONV | n=133 | pattern=04 | fault=4 | energy=3125/5000 | coverage=20% | threshold=3500
+CONV | n=134 | pattern=05 | fault=4 | energy=3142/5000 | coverage=25% | threshold=3500
+CONV | n=135 | pattern=06 | fault=4 | energy=3172/5000 | coverage=25% | threshold=3500
+CONV | n=136 | pattern=07 | fault=4 | energy=3187/5000 | coverage=25% | threshold=3500
+CONV | n=137 | pattern=08 | fault=4 | energy=3207/5000 | coverage=25% | threshold=3500
+CONV | n=138 | pattern=09 | fault=4 | energy=3224/5000 | coverage=25% | threshold=3500
+CONV | n=139 | pattern=0a | fault=4 | energy=3258/5000 | coverage=25% | threshold=3500
+CONV | n=140 | pattern=0b | fault=4 | energy=3289/5000 | coverage=25% | threshold=3500
+CONV | n=141 | pattern=0c | fault=4 | energy=3318/5000 | coverage=25% | threshold=3500
+CONV | n=142 | pattern=0d | fault=4 | energy=3335/5000 | coverage=25% | threshold=3500
+CONV | n=143 | pattern=0e | fault=4 | energy=3365/5000 | coverage=25% | threshold=3500
+CONV | n=144 | pattern=0f | fault=4 | energy=3380/5000 | coverage=25% | threshold=3500
+CONV | n=145 | pattern=10 | fault=4 | energy=3401/5000 | coverage=25% | threshold=3500
+CONV | n=146 | pattern=11 | fault=4 | energy=3418/5000 | coverage=25% | threshold=3500
+CONV | n=147 | pattern=12 | fault=4 | energy=3452/5000 | coverage=25% | threshold=3500
+CONV | n=148 | pattern=13 | fault=4 | energy=3483/5000 | coverage=25% | threshold=3500
+CONV | n=149 | pattern=14 | fault=4 | energy=3518/5000 | coverage=25% | threshold=3500
+------------------------------------------------------------
+SWITCH: conventional -> adaptive
+switch energy   = 3518
+switch coverage = 25%
+high_priority   = 1
+------------------------------------------------------------
+ADAPT | n=1 | pattern=01 | target_fault=5 | cost=19 | energy=3537/5000 | coverage=30% | decision=1 | HIGH=1
+ADAPT | n=2 | pattern=07 | target_fault=11 | cost=18 | energy=3555/5000 | coverage=35% | decision=1 | HIGH=1
+ADAPT | n=3 | pattern=06 | target_fault=10 | cost=17 | energy=3572/5000 | coverage=40% | decision=1 | HIGH=1
+ADAPT | n=4 | pattern=06 | target_fault=12 | cost=16 | energy=3588/5000 | coverage=45% | decision=1 | HIGH=1
+ADAPT | n=5 | pattern=00 | target_fault=7 | cost=12 | energy=3600/5000 | coverage=50% | decision=1 | HIGH=1
+ADAPT | n=6 | pattern=00 | target_fault=13 | cost=0 | energy=3600/5000 | coverage=55% | decision=1 | HIGH=1
+ADAPT | n=7 | pattern=0f | target_fault=6 | cost=4 | energy=3604/5000 | coverage=60% | decision=1 | HIGH=1
+ADAPT | n=8 | pattern=00 | target_fault=15 | cost=12 | energy=3616/5000 | coverage=65% | decision=1 | HIGH=1
+ADAPT | n=9 | pattern=06 | target_fault=9 | cost=4 | energy=3620/5000 | coverage=70% | decision=1 | HIGH=1
+ADAPT | n=10 | pattern=1f | target_fault=8 | cost=17 | energy=3637/5000 | coverage=75% | decision=1 | HIGH=1
+ADAPT | n=11 | pattern=06 | target_fault=16 | cost=15 | energy=3652/5000 | coverage=80% | decision=1 | HIGH=1
+ADAPT | n=12 | pattern=1f | target_fault=17 | cost=17 | energy=3669/5000 | coverage=85% | decision=1 | HIGH=1
+ADAPT | n=13 | pattern=06 | target_fault=18 | cost=15 | energy=3684/5000 | coverage=90% | decision=1 | HIGH=1
+ADAPT | n=14 | pattern=1f | target_fault=19 | cost=17 | energy=3701/5000 | coverage=95% | decision=1 | HIGH=1
+ADAPT | n=15 | pattern=06 | target_fault=14 | cost=15 | energy=3716/5000 | coverage=100% | decision=2 | HIGH=0
+============================================================
+ FINAL HYBRID RESULT
+ switch energy       = 3518
+ switch coverage     = 25%
+ adaptive energy add = 198
+ total energy        = 3716/5000
+ final coverage      = 100%
+ conventional tests  = 149
+ adaptive tests      = 15
+ 95% milestone       = 1
+ 100% reached        = 1
+ high-priority used  = 1
+============================================================
+PASS: 95% acceptable fault coverage achieved.
+PASS: 100% full fault coverage achieved.
+PASS: total hybrid test stayed within the energy budget.
+Simulation complete via $finish(1) at time 21346 NS + 0
+../tb/tb_adaptive.sv:469         $finish;
+xcelium> run
+xmsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+xcelium> ^C
+xcelium> exit
+...Regained control from SimVision
+-------------------------------------
+TOOL:	xrun(64)	22.09-s003: Exiting on Oct 05, 2026 at 14:43:29 EDT  (total: 00:25:32)

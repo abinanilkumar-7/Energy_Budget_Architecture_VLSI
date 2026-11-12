@@ -1,0 +1,16 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-64bit
+-sv
+-access
++rwc
+-linedebug
+-f
+filelist.f
+-top
+tb_conventional
+-l
+logs/xrun.log
+-gui

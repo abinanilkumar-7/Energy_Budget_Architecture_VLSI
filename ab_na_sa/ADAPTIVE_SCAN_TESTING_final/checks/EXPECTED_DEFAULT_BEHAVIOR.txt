@@ -1,0 +1,28 @@
+DEFAULT-BUDGET REFERENCE CHECK (mathematical / model-level, not Xcelium execution)
+
+Configuration:
+  Energy budget       = 5000
+  70% threshold      = 3500
+  Acceptable coverage = 95%
+  Full coverage       = 100%
+  Faults              = 20
+
+Using the fixed conventional pattern sequence 00,01,...,1F on the shared scan
+hardware, the switch is expected just after the energy crosses the 3500-unit
+threshold. A model-level calculation gives approximately:
+  switch energy   = 3518
+  switch coverage = 25%
+
+The dynamic ATPG then selects a pattern/fault pair for each remaining fault,
+with all selected candidates required to fit the remaining budget. A model-level
+calculation gives approximately:
+  adaptive energy added = 198
+  final cumulative energy = 3716
+  final coverage = 100%
+
+Therefore the intended waveform sequence is:
+  CONVENTIONAL -> 70% threshold crossed -> HIGH PRIORITY -> 95% milestone
+  -> CONTINUE -> 100% -> STOP
+
+The numbers above are reference expectations from the RTL algorithm and fault
+model. The actual Cadence Xcelium run is the authoritative simulation result.

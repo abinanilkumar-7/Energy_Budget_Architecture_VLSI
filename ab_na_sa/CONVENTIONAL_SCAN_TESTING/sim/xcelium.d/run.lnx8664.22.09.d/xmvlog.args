@@ -1,0 +1,34 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.22.09.d
+-RUNMODE
+-sv
+-LINEDEBUG
+../rtl/cut.v
+../rtl/scan_chain.v
+../rtl/activity_monitor.v
+../rtl/energy_monitor.v
+../rtl/fault_injection.v
+../rtl/faulty_cut.sv
+../rtl/fault_detector.v
+../rtl/fault_coverage.v
+../rtl/conventional_top.v
+../rtl/conventional_design_top.sv
+../tb/reference_model.v
+../verification/conventional_assertions.sv
+../verification/coverage.sv
+../tb/tb_conventional.sv
+-CDSLIB
+./xcelium.d/run.lnx8664.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.22.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.22.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

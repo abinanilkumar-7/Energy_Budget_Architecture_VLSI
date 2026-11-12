@@ -1,0 +1,25 @@
+CONVENTIONAL_SCAN_TESTING
+=========================
+
+Simulation top:
+  tb_conventional
+
+Synthesizable design top:
+  conventional_design_top
+
+Conventional-only path:
+  rtl/conventional_top.v
+  rtl/conventional_design_top.sv
+
+Common scan/fault/energy sources:
+  rtl/cut.v
+  rtl/scan_chain.v
+  rtl/activity_monitor.v
+  rtl/energy_monitor.v
+  rtl/fault_injection.v
+  rtl/faulty_cut.sv
+  rtl/fault_detector.v
+  rtl/fault_coverage.v
+
+No adaptive controller, adaptive ATPG, adaptive top, or adaptive testbench
+is instantiated or included in this package.
